@@ -1,0 +1,39 @@
+# Eclipse core files
+.project
+.classpath
+.settings/
+
+# Eclipse workspace metadata
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+
+# Build output
+target/
+build/
+out/
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Java specific
+*.class
+*.jar
+*.war
+*.ear
+hs_err_pid*
+replay_pid*
+
+# IntelliJ / VS Code (in case someone uses them too)
+.idea/
+*.iml
+.vscode/
