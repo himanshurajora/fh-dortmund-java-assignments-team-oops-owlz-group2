@@ -7,12 +7,12 @@ public class Problem2 {
 
         int nValues = 50;
 
-        outer: // This is the label for the outer loop
+        outer: 
         for (int a = 2; a <= nValues; a++) {
             // Check divisibility only up to the square root of i
             for (int j = 2; j <= Math.sqrt(a); j++) {
                 if (a % j == 0) {
-                    continue outer; // Skip to the next i
+                    continue outer; 
                 }
             }
             // If no divisor found, print the number
@@ -21,5 +21,6 @@ public class Problem2 {
 		
 
 	}
+
 
 }
