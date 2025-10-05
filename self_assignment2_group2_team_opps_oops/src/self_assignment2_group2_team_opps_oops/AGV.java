@@ -1,18 +1,17 @@
-package warehouse;
+package self_assignment2_group2_team_opps_oops;
 
-
-public class AGV{
+public class AGV {
     private String id;
-    private double batteryLoad;    
-    private double consumption;    
-    private double chargingTime;   
-    private String position;       
-    private float maxSpeed;        
-    private float actSpeed;        
+    private double batteryLoad;
+    private double consumption;
+    private double chargingTime;
+    private String position;
+    private float maxSpeed;
+    private float actSpeed;
 
     // Constructor
     public AGV(String id, double batteryLoad, double consumption,
-               double chargingTime, String position, float maxSpeed, float actSpeed) {
+            double chargingTime, String position, float maxSpeed, float actSpeed) {
         this.id = id;
         this.batteryLoad = batteryLoad;
         this.consumption = consumption;
@@ -23,16 +22,36 @@ public class AGV{
     }
 
     // --- Getters and Setters ---
-    public String getId() { return id; }
-    public double getBatteryLoad() { return batteryLoad; }
-    public double getConsumption() { return consumption; }
-    public double getChargingTime() { return chargingTime; }
-    public String getPosition() { return position; }
-    public float getMaxSpeed() { return maxSpeed; }
-    public float getActSpeed() { return actSpeed; }
+    public String getId() {
+        return id;
+    }
+
+    public double getBatteryLoad() {
+        return batteryLoad;
+    }
+
+    public double getConsumption() {
+        return consumption;
+    }
+
+    public double getChargingTime() {
+        return chargingTime;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public float getMaxSpeed() {
+        return maxSpeed;
+    }
+
+    public float getActSpeed() {
+        return actSpeed;
+    }
 
     public void setData(String id, double batteryLoad, double consumption,
-                        double chargingTime, String position, float maxSpeed, float actSpeed) {
+            double chargingTime, String position, float maxSpeed, float actSpeed) {
         this.id = id;
         this.batteryLoad = batteryLoad;
         this.consumption = consumption;
@@ -47,9 +66,8 @@ public class AGV{
                 id, batteryLoad, consumption, position, actSpeed, maxSpeed);
     }
 
-    
     public void perform(double hours) {
         double used = hours * consumption;
-        batteryLoad = Math.max(0, batteryLoad - used); 
+        batteryLoad = Math.max(0, batteryLoad - used);
     }
 }
