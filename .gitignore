@@ -1,7 +1,4 @@
 # Eclipse core files
-.project
-.classpath
-.settings/
 
 # Eclipse workspace metadata
 .metadata/
