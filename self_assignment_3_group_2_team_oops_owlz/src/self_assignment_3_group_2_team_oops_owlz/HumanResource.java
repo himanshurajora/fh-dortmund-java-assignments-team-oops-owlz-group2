@@ -4,6 +4,11 @@ public class HumanResource extends Resource {
     public String name;
     public String role;
 
+    public HumanResource(String name, String role) {
+        this.name = name;
+        this.role = role;
+    }
+
     @Override
     public void showInfo() {
         System.out.printf("Human Resource -> Name: %s and Role: %s%n", name, role);

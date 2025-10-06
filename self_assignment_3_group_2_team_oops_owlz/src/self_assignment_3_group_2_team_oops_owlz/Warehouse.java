@@ -3,8 +3,6 @@ package self_assignment_3_group_2_team_oops_owlz;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 public class Warehouse {
     private String name;
     private List<AGV> agvs = new ArrayList<>();
@@ -15,17 +13,18 @@ public class Warehouse {
         this.name = name;
     }
 
-   
+    public String getName() {
+        return name;
+    }
+
     public void addAGV(AGV agv) {
         agvs.add(agv);
     }
 
-    
     public void addProcess(IndustrialProcess process) {
         processes.add(process);
     }
 
-    
     public void listAGVs() {
         System.out.println("AGVs in " + name + ":");
         for (AGV agv : agvs) {
@@ -33,7 +32,6 @@ public class Warehouse {
         }
     }
 
-    
     public void runProcesses() {
         System.out.println("\nRunning processes in " + name + "...");
         for (IndustrialProcess process : processes) {

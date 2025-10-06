@@ -4,9 +4,9 @@ import java.util.List;
 
 abstract public class Process {
     private final String name;
-    private final List<Operation> operations;
+    private final List<IOperation> operations;
 
-    public Process(String name, List<Operation> operations) {
+    public Process(String name, List<IOperation> operations) {
         this.name = name;
         this.operations = operations;
     }
@@ -15,7 +15,7 @@ abstract public class Process {
         return name;
     }
 
-    public List<Operation> getOperations() {
+    public List<IOperation> getOperations() {
         return operations;
     }
 

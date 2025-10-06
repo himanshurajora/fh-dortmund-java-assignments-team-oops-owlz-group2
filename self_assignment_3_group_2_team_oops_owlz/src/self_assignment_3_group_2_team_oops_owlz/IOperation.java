@@ -6,10 +6,12 @@ abstract public class IOperation {
 
     private final String name;
     private final List<AGV> agvs;
+    private final double duration;
 
-    public IOperation(String name, List<AGV> agvs) {
+    public IOperation(String name, List<AGV> agvs, double duration) {
         this.name = name;
         this.agvs = agvs;
+        this.duration = duration;
     }
 
     public String getName() {
@@ -20,5 +22,11 @@ abstract public class IOperation {
         return agvs;
     }
 
+    public double getDuration() {
+        return duration;
+    }
+
     abstract public void perform();
+
+    abstract public double energyConsumed();
 }
