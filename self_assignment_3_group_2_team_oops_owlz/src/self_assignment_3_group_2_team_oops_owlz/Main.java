@@ -5,15 +5,15 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
 
-        AGV agv1 = new AGV("AGV-1", 50.0, 5.0, 2.0, "Dock", 10.0f, 5.0f);
-        AGV agv2 = new AGV("AGV-2", 40.0, 4.0, 1.5, "Aisle-1", 8.0f, 4.0f);
-        AGV agv3 = new AGV("AGV-3", 60.0, 6.0, 2.5, "Storage", 12.0f, 6.0f);
+        AGV agv1 = new AGV("AGV-1", 50.0, 5.0, 2.0, "Dock", 10.0f, 5.0f, "AGV-1", "Hardware", "1234567890");
+        AGV agv2 = new AGV("AGV-2", 40.0, 4.0, 1.5, "Aisle-1", 8.0f, 4.0f, "AGV-2", "Hardware", "1234567890");
+        AGV agv3 = new AGV("AGV-3", 60.0, 6.0, 2.5, "Storage", 12.0f, 6.0f, "AGV-3", "Hardware", "1234567890");
 
         // Create operations
-        Operation unload = new Operation("Unload", 1.0, Arrays.asList(agv1, agv2));
+        Operation unload = new Operation("Unload", 1.0, Arrays.asList(agv1, agv2), 1.0);
         Operation transport = new Operation("Transport", 0.5, Arrays.asList(agv2,
-                agv3));
-        Operation store = new Operation("Store", 2.0, Arrays.asList(agv1));
+                agv3), 2.0);
+        Operation store = new Operation("Store", 2.0, Arrays.asList(agv1), 2.5);
 
         IndustrialProcess process = new IndustrialProcess("Warehouse-Process");
         process.addOperation(unload);

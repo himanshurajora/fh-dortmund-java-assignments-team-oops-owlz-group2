@@ -1,6 +1,6 @@
 package self_assignment_3_group_2_team_oops_owlz;
 
-public class AGV extends Resource {
+public class AGV extends HardwareResource {
     private String id;
     private double batteryLoad;
     private double consumption;
@@ -10,7 +10,10 @@ public class AGV extends Resource {
     private float actSpeed;
 
     public AGV(String id, double batteryLoad, double consumption,
-            double chargingTime, String position, float maxSpeed, float actSpeed) {
+            double chargingTime, String position, float maxSpeed, float actSpeed, String name, String type,
+            String serialNumber) {
+
+        super(name, type, serialNumber);
         this.id = id;
         this.batteryLoad = batteryLoad;
         this.consumption = consumption;
@@ -18,6 +21,9 @@ public class AGV extends Resource {
         this.position = position;
         this.maxSpeed = maxSpeed;
         this.actSpeed = actSpeed;
+        this.name = name;
+        this.type = type;
+        this.serialNumber = serialNumber;
     }
 
     public String getId() {
@@ -64,9 +70,8 @@ public class AGV extends Resource {
                 id, batteryLoad, consumption, position, actSpeed, maxSpeed);
     }
 
-    public void perform(double hours) {
-        double used = hours * consumption;
-        batteryLoad = Math.max(0, batteryLoad - used);
+    public void perform(String operationName) {
+        System.out.printf("AGV %s (serial number: %s) is performing operation %s%n", id, serialNumber, operationName);
     }
 
     @Override

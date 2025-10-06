@@ -3,8 +3,6 @@ package self_assignment_3_group_2_team_oops_owlz;
 import java.util.ArrayList;
 import java.util.List;
 
-
-
 public class IndustrialProcess {
     private final String name;
     private final List<Operation> operations = new ArrayList<>();
@@ -24,7 +22,7 @@ public class IndustrialProcess {
 
         for (Operation op : operations) {
             op.perform(); // AGVs use energy
-            totalTime += op.getDuration();
+            totalTime += op.getUnitDurationEnergyConsumption();
             totalEnergy += op.energyConsumed();
             maxAGVs = Math.max(maxAGVs, op.getAgvs().size());
         }
