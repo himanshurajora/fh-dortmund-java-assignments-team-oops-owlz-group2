@@ -9,7 +9,6 @@ public class Main {
 
         System.out.println("--- 1. Initializing Warehouse Resources ---");
 
-        // Hardware Resources (AGVs)
         AGV agv1 = new AGV("AGV-1", 50.0, 5.0, 2.0, "Dock", 10.0f, 5.0f, "AGV-1", "Hardware", "SN-HW-001");
         AGV agv2 = new AGV("AGV-2", 40.0, 4.0, 1.5, "Aisle-1", 8.0f, 4.0f, "AGV-2", "Hardware", "SN-HW-002");
         AGV agv3 = new AGV("AGV-3", 60.0, 6.0, 2.5, "Storage", 12.0f, 6.0f, "AGV-3", "Hardware", "SN-HW-003");
